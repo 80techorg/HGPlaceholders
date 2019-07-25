@@ -11,6 +11,14 @@ import UIKit
 ///  A collection view  that allows to show easily placeholders like no results, no internet connection, etc
 open class CollectionView: UICollectionView {
     
+    deinit {
+        defaultDelegate = nil
+        defaultDataSource = nil
+        dataSource = nil
+        delegate = nil
+        placeholderDelegate = nil
+    }
+    
     // MARK: - Public properties
     
     /**
