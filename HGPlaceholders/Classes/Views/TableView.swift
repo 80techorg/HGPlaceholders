@@ -23,6 +23,17 @@ public protocol PlaceholderDelegate: class {
 ///  A table view  that allows to show easily placeholders like no results, no internet connection, etc
 open class TableView: UITableView {
     
+    /// HOTFIX for : https://github.com/HamzaGhazouani/HGPlaceholders/issues/45
+    deinit {
+        defaultTableFooterView = nil
+        defaultDelegate = nil
+        defaultDataSource = nil
+        defaultTableHeaderView = nil
+        dataSource = nil
+        delegate = nil
+        placeholderDelegate = nil
+    }
+    
     // MARK: - Public properties
     
     /// The placeholdersProvider property is responsible for the placeholders views and data
