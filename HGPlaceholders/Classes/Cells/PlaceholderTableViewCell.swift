@@ -15,11 +15,11 @@ open class PlaceholderTableViewCell: UITableViewCell {
     
     // MARK: Properties 
     
-    @IBOutlet weak var titleLabel: UILabel?
-    @IBOutlet weak var subtitleLabel: UILabel?
-    @IBOutlet weak var placeholderImageView: UIImageView?
-    @IBOutlet weak var actionButton: UIButton?
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet public weak var titleLabel: UILabel?
+    @IBOutlet public weak var subtitleLabel: UILabel?
+    @IBOutlet public weak var placeholderImageView: UIImageView?
+    @IBOutlet public weak var actionButton: UIButton?
+    @IBOutlet public weak var activityIndicator: UIActivityIndicatorView?
     
     var cellView: UIView {
         return self
