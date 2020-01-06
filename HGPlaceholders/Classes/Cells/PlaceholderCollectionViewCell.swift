@@ -19,7 +19,7 @@ open class PlaceholderCollectionViewCell: UICollectionViewCell {
     @IBOutlet public weak var actionButton: UIButton?
     @IBOutlet public weak var activityIndicator: UIActivityIndicatorView?
     
-     var cellView: UIView {
+    public var cellView: UIView {
         return self
     }
     
