@@ -13,6 +13,7 @@ public protocol CellPlaceholding {
     var titleLabel: UILabel? { get set }
     var subtitleLabel: UILabel? { get set }
     var placeholderImageView: UIImageView? { get set }
+    var placeholderBackgroundView: UIView? { get set }
     var actionButton: UIButton? { get set }
     var activityIndicator: UIActivityIndicatorView? { get set }
     
@@ -59,7 +60,8 @@ extension CellPlaceholding {
         titleLabel?.textColor = style.titleColor
         titleLabel?.font = style.titleFont
         titleLabel?.textAlignment = style.titleTextAlignment
-        
+        placeholderBackgroundView?.backgroundColor = style.imageBackgroundColor
+        placeholderBackgroundView?.layer.cornerRadius = style.imageBackgroundCornerRadius
         subtitleLabel?.textColor = style.subtitleColor
         subtitleLabel?.font = style.subtitleFont
         subtitleLabel?.textAlignment = style.subtitleTextAlignment
@@ -75,6 +77,9 @@ extension CellPlaceholding {
         titleLabel?.text = data?.title
         subtitleLabel?.text = data?.subtitle
         placeholderImageView?.image = data?.image
+       // placeholderBackgroundView?.backgroundColor = data?.imageBackgroundColor
+      //  placeholderBackgroundView?.layer.cornerRadius = data?.backgroundCornerRadius ?? 60.0
+
         
         data?.showsLoading == true ? activityIndicator?.startAnimating() : activityIndicator?.stopAnimating()
     }

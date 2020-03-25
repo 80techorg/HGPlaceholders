@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment version="4368" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,17 +22,41 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-ph-918">
                                 <rect key="frame" x="20" y="4" width="735" height="212"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="halloween-loading" translatesAutoresizingMaskIntoConstraints="NO" id="oEI-sb-ulS">
-                                        <rect key="frame" x="307.66666666666669" y="0.0" width="120" height="128"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-d5-jAM">
-                                        <rect key="frame" x="348.33333333333331" y="136" width="38.333333333333314" height="23"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-Bt-t1a">
+                                        <rect key="frame" x="307.66666666666669" y="0.0" width="120" height="120"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="halloween-loading" translatesAutoresizingMaskIntoConstraints="NO" id="oEI-sb-ulS">
+                                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Bsn-mk-OOV"/>
+                                                    <constraint firstAttribute="height" constant="100" id="GzM-FW-MFj"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="oEI-sb-ulS" secondAttribute="bottom" constant="10" id="2sk-7e-B5S"/>
+                                            <constraint firstItem="oEI-sb-ulS" firstAttribute="centerY" secondItem="0Gk-Bt-t1a" secondAttribute="centerY" id="5bI-fq-7yH"/>
+                                            <constraint firstAttribute="width" secondItem="0Gk-Bt-t1a" secondAttribute="height" multiplier="1:1" id="5zb-pa-VaX"/>
+                                            <constraint firstAttribute="trailing" secondItem="oEI-sb-ulS" secondAttribute="trailing" constant="10" id="Iyd-4y-0cu"/>
+                                            <constraint firstItem="oEI-sb-ulS" firstAttribute="leading" secondItem="0Gk-Bt-t1a" secondAttribute="leading" constant="10" id="TaO-ML-SvZ"/>
+                                            <constraint firstItem="oEI-sb-ulS" firstAttribute="top" secondItem="0Gk-Bt-t1a" secondAttribute="top" constant="10" id="jpM-0q-ckZ"/>
+                                            <constraint firstItem="oEI-sb-ulS" firstAttribute="centerX" secondItem="0Gk-Bt-t1a" secondAttribute="centerX" id="wD3-9y-QZ2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-d5-jAM">
+                                        <rect key="frame" x="348.33333333333331" y="128" width="38.333333333333314" height="31"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="Efm-pp-P5W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="Efm-pp-P5W">
                                         <rect key="frame" x="342.66666666666669" y="167" width="49.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,6 +114,7 @@
             <connections>
                 <outlet property="actionButton" destination="QUR-tb-JTX" id="J5d-OT-2Ho"/>
                 <outlet property="activityIndicator" destination="7OP-IO-NHg" id="1pU-MP-eUj"/>
+                <outlet property="placeholderBackgroundView" destination="0Gk-Bt-t1a" id="Mez-j6-a0x"/>
                 <outlet property="placeholderImageView" destination="oEI-sb-ulS" id="3dT-05-Ub6"/>
                 <outlet property="subtitleLabel" destination="Efm-pp-P5W" id="laL-gg-u6o"/>
                 <outlet property="titleLabel" destination="JBE-d5-jAM" id="R3t-Ch-56d"/>

@@ -15,6 +15,11 @@ public struct PlaceholderData {
     
     /// The placeholder image, if the image is nil, the placeholder image view will be hidden
     public var image: UIImage?
+    /// The placeholder image, if the image is nil, the placeholder image view will be hidden
+   // public var imageBackgroundColor: UIColor?
+    
+    /// The placeholder image, if the image is nil, the placeholder image view will be hidden
+   // public var backgroundCornerRadius: CGFloat?
     
     /// the placeholder title
     public var title: String?

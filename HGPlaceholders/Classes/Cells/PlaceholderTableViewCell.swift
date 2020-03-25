@@ -20,7 +20,7 @@ open class PlaceholderTableViewCell: UITableViewCell {
     @IBOutlet public weak var placeholderImageView: UIImageView?
     @IBOutlet public weak var actionButton: UIButton?
     @IBOutlet public weak var activityIndicator: UIActivityIndicatorView?
-    
+    @IBOutlet public weak var placeholderBackgroundView: UIView?
     public var cellView: UIView {
         return self
     }
